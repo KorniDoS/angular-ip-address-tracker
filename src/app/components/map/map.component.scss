@@ -1,0 +1,21 @@
+.map-container {
+    width: 100%;
+    height: calc(100vh - 21.25rem);
+    z-index: -1;
+
+
+    @media screen and (min-width: 1000px) {
+      height: calc(100vh - 17.5rem);
+    }
+  }
+  
+  .map-frame {
+    position: relative;
+    height: 100%;
+
+  }
+  
+  #map {
+    height: 100%;
+  }
+  
