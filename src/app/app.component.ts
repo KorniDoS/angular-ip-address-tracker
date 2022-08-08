@@ -4,7 +4,7 @@ import { IpService } from './services/ip.service';
 import { FormsModule } from '@angular/forms';
 import { isIP } from 'is-ip';
 import { MapComponent } from './components/map/map.component';
-
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -24,13 +24,14 @@ export class AppComponent implements OnInit {
 
   searchFormInput?: any = '';
 
-  constructor(private ipService: IpService) { }
+  constructor(private ipService: IpService, private spinner: NgxSpinnerService) { }
 
 
 
 
   ipSub?: Subscription;
   ngOnInit(): void {
+    this.spinner.show();
      this.ipSub = this.ipService.getClientIp().subscribe(
        res=>{
         this.ipData = res;
@@ -45,6 +46,12 @@ export class AppComponent implements OnInit {
         )
        }
      )
+
+     setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
+
+
   }
 
 
