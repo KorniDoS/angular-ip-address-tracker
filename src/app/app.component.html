@@ -6,7 +6,7 @@
 <div class="wrapper">
 <form #form="ngForm">
     <input type="text" class="search-ip" name="search" placeholder="Search for any IP address or domain" 
-    [(ngModel)]="searchFormInput" [value]="searchFormInput" (keyup.enter)="searchIP($event)">
+    [(ngModel)]="searchFormInput" (keyup.enter)="searchIP($event)">
 </form>
 
 <button class="search-btn" (click)="searchIP($event)">

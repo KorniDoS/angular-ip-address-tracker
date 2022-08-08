@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
        res=>{
         this.ipData = res;
  
-        this.searchFormInput = this.ipData.ip;
+        //this.searchFormInput = this.ipData.ip;
  
         this.ipService.getClientRegion(this.ipData.ip).subscribe(
          resp=>{
