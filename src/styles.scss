@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+/*# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Gray: hsl(0, 0%, 17%)
+- Dark Gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (text input): 18px
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 400, 500, 700
+*/
+
+$font-family: 'Rubick', sans-serif;
+
+
+$container-sm: 540px;
+$container-md: 740px;
+$container-lg: 960px;
+$container-xlg: 1140px;
+$container-xxlg: 1320px;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    display: block;
+    font-family: $font-family;
+    width: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.4;
+}
+
+
+main, header{
+    width: 100%;
+    font-family: inherit;
+
+}
+
+
+.d-flex-center-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.d-flex-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container {
+    max-width: 100%;
+    padding: 2rem;
+    margin-block-start: 2rem;
+    margin-inline: auto;
+    /*border: 1px solid red;*/
+
+
+    @media screen and (min-width: 576px) {
+
+        width: $container-sm !important;
+
+    }
+
+    @media screen and (min-width: 768px) {
+
+        width: $container-md !important;
+
+    }
+
+
+    @media screen and (min-width: 992px) {
+
+        width: $container-lg !important;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        width: $container-xlg !important;
+
+    }
+
+    @media screen and (min-width: 1400px) {
+
+        width: $container-xxlg !important;
+
+    }
+}
+.leaflet-control-container{
+    display: none;
+}
+
